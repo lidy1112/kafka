@@ -14,16 +14,11 @@ public class SwaggerConfig {
 
 	@Bean
 	public OpenAPI openAPI() {
-		Info info = new Info()
-			.version("버전")
-			.title("제목")
-			.description("설명");
 
 		Server server = new Server();
-		server.setUrl("https://www.lidy.synology.me"); // https://에 접근 가능하게 설정
+		server.setUrl("https://www.lidy.synology.me/kafka"); // https://에 접근 가능하게 설정
 
 		return new OpenAPI()
-			.info(info)
 			.servers(List.of(server));
 	}
 }
